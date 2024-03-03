@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>latihan1</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-gray-100">
+	<div @click="alert('div keklik')" x-data="{ pesan: 'Hello World'}" class="container mx-auto text-center w-1/2 mt-10 bg-white p-10 shadow rounded" @log="alert('Halo ' + event.detail.nama)">
+		<label for="nama" class="text-lg font-medium text-gray-900 block mb-3">Masukan nama</label>
+		<input @keyup.shift.enter="alert('input terkirim')" type="text" class="border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+		<button @click.stop="alert('ahadf')" type="submit" class="mt-5 p-1 rounded hover:bg-blue-700 bg-blue-500 text-white" >Kirim gw aq!!</button>
+	</div>
+</body>
+</html>

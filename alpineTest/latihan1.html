@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>latihan1</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="//unpkg.com/alpinejs" defer></script>
+	<script>
+		document.addEventListener('alpine:init',() => {
+			Alpine.store('mahasiswa', {
+				tahun: 2024,
+				nama: ['Ego','gito','asdlf'],
+			});
+		});
+	</script>
+</head>
+<body>
+	<div x-data="{nama:'irfandi'}">
+		<div x-data="{umur:18}">
+			<span x-text="nama"></span>
+			<span x-text="umur"></span>			
+		</div>
+	</div>
+	<div x-data>
+		<ul>
+			<template x-for="nm in $store.mahasiswa.nama">
+				<li x-text="nm"></li>
+			</template>
+		</ul>
+	</div>
+	<button x-data @click="alert('tombol telah di klik!!')">diklik</button>
+</body>
+</html>

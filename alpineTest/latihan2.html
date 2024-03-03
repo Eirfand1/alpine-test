@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>latihan1</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+	<div x-data="{nama:'irfandi',ankga:3,italic:'<i>ini initali</i>'}" class="container mx-auto text-center w-1/2 mt-10 bg-cyan-500 p-10 shadow">
+		<h1 class="text-5xl text-gray-100 font-bold">Halo,<span x-text="ankga % 2 ===0 ? 'genap' : 'ganjil'" ></span></h1>
+		<h2 class="mt-5 text-white" x-html="italic"></h2>
+	</div>	
+</body>
+</html>
